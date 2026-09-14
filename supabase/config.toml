@@ -1,0 +1,11 @@
+[functions]
+  # Configuração das Edge Functions
+  verify_jwt = false
+
+[functions.notify-email]
+  entrypoint = "supabase/functions/notify-email/index.ts"
+  import_map = "supabase/functions/notify-email/import_map.json"
+
+[functions.notify-whatsapp]
+  entrypoint = "supabase/functions/notify-whatsapp/index.ts"
+  import_map = "supabase/functions/notify-whatsapp/import_map.json"
