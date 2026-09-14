@@ -1,8 +1,9 @@
 // =====================================================
 // 🔗 CONEXÃO COM O BANCO DE DADOS SUPABASE
 // =====================================================
-const SUPABASE_URL = import.meta.env.SUPABASE_URL
-const SUPABASE_ANON_KEY = import.meta.env.SUPABASE_ANON_KEY
+// ✅ LÊ AS VARIÁVEIS DA VERCEL DE FORMA CERTA
+const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL
+const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 let supabase
 
 // Conecta ao banco automaticamente
