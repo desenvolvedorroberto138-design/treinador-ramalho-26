@@ -21,17 +21,26 @@
 <body>
 
     <!-- CABEÇALHO -->
-    <header class="header">
-        <div class="logo">VINICIUS RAMALHO</div>
-        
-        <nav class="nav-links">
-            <a href="#services">Serviços</a>
-            <a href="#about">Sobre</a>
-            <a href="#results">Resultados</a>
-        </nav>
+   <header class="header">
+    <div class="logo">VINICIUS RAMALHO</div>
 
-        <a href="#contact" class="btn-header">CONTATO</a>
-    </header>
+    <!-- Hamburger Button -->
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Navigation Wrapper -->
+    <nav class="nav-wrapper" id="navWrapper">
+        <div class="nav-links">
+            <a href="#servicos">Serviços</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#resultados">Resultados</a>
+        </div>
+        <a href="#contato" class="btn-header">CONTATO</a>
+    </nav>
+</header>
 
     <!-- HERO SECTION -->
     <section class="hero">
@@ -230,5 +239,23 @@
 
     <script src="config.js"></script>
     <script src="script.js" type="module"></script>
+
+    <script>
+const hamburger = document.getElementById('hamburger');
+const navWrapper = document.getElementById('navWrapper');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navWrapper.classList.toggle('active');
+});
+
+// Close menu when clicking a link
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navWrapper.classList.remove('active');
+    });
+});
+</script>
 </body>
 </html>
