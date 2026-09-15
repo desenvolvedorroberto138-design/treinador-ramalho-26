@@ -270,6 +270,47 @@ img {
     pointer-events: none;
 }
 
+/* Individual positions for each decorative image */
+.hero-bg-img-1 {
+    top: 8%;
+    left: 3%;
+    width: 180px;
+    height: auto;
+}
+.hero-bg-img-2 {
+    top: 8%;
+    right: 3%;
+    width: 180px;
+    height: auto;
+}
+.hero-bg-img-3 {
+    bottom: 10%;
+    left: 5%;
+    width: 230px;
+    height: auto;
+}
+.hero-bg-img-4 {
+    bottom: 12%;
+    right: 4%;
+    width: 190px;
+    height: auto;
+}
+.hero-bg-img-5 {
+    top: 55%;
+    left: 2%;
+    width: 150px;
+    height: auto;
+}
+
+/* Mobile: half size for all hero background images */
+@media (max-width: 768px) {
+    .hero-bg-img-1 { width: 90px; }
+    .hero-bg-img-2 { width: 90px; }
+    .hero-bg-img-3 { width: 115px; }
+    .hero-bg-img-4 { width: 95px; }
+    .hero-bg-img-5 { width: 75px; }
+}
+
 /* ==========================================
    SERVICES SECTION — Responsive Grid
 ========================================== */
