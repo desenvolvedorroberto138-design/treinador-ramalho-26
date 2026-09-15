@@ -31,3 +31,8 @@ coverage/
 # Misc
 *.tgz
 .cache/
+# Supabase CLI e arquivos temporários
+supabase.exe
+supabase/
+.temp/
+*.temp
