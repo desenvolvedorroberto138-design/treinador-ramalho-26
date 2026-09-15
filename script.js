@@ -21,10 +21,9 @@ async function conectarSupabase() {
 // 🔔 TOAST NOTIFICATIONS (compartilhado com admin)
 // =====================================================
 function showToast(message, type = 'info', duration = 4000) {
-  let container = document.getElementById('toast-container')
+  let container = document.querySelector('.toast-container')
   if (!container) {
     container = document.createElement('div')
-    container.id = 'toast-container'
     container.className = 'toast-container'
     document.body.appendChild(container)
   }
