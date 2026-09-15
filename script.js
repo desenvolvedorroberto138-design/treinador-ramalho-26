@@ -283,7 +283,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         ;[nomeInput, whatsappInput, objetivoInput].forEach(input => input.classList.remove('valid'))
         updateCharCount(objetivoInput)
 
-        // Dispara notificações via Edge Functions (fire and forget)
+        // Dispara notificação de e-mail via Edge Function (fire and forget)
         fetch(`${SUPABASE_URL}/functions/v1/notify-email`, {
           method: 'POST',
           headers: {
@@ -293,14 +293,15 @@ document.addEventListener('DOMContentLoaded', async () => {
           body: JSON.stringify({ nome, whatsapp, objetivo, data_envio: new Date().toISOString() })
         }).catch(console.error)
 
-        fetch(`${SUPABASE_URL}/functions/v1/notify-whatsapp`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
-          },
-          body: JSON.stringify({ nome, whatsapp, objetivo, data_envio: new Date().toISOString() })
-        }).catch(console.error)
+        // notify-whatsapp comentado até a function ser criada no Supabase
+        // fetch(`${SUPABASE_URL}/functions/v1/notify-whatsapp`, {
+        //   method: 'POST',
+        //   headers: {
+        //     'Content-Type': 'application/json',
+        //     'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
+        //   },
+        //   body: JSON.stringify({ nome, whatsapp, objetivo, data_envio: new Date().toISOString() })
+        // }).catch(console.error)
 
       } catch (erro) {
         console.error(erro)
