@@ -266,9 +266,8 @@ img {
     width: 25%;
     height: 28%;
     object-fit: contain;
-    opacity: 0.03;
+    opacity: 0.15;
     pointer-events: none;
-    display: none; /* Hide on mobile for performance */
 }
 
 /* ==========================================
