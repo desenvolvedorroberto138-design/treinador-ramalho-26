@@ -784,6 +784,9 @@ img {
     .floating-card { max-width: 130px; padding: 12px; }
     .card-number { font-size: 1.3rem; }
     .card-text { font-size: 0.7rem; }
+
+    /* Hero Background Images - smaller on mobile */
+    .hero-bg-img { width: 12%; height: 14%; opacity: 0.08; }
 }
 
 /* SMALL MOBILE — Up to 480px */
@@ -797,7 +800,7 @@ img {
     .carousel-images { height: 260px; }
     .contact-form input, .contact-form textarea { padding: 12px 14px; font-size: 16px; }
     .about-stats { gap: 15px; }
-    .stat-number { font-size: 1.5rem; }
-    .service-card, .contact-item { padding: 20px 15px; }
-    .result-card img { height: 200px; }
+
+    /* Hero Background Images - even smaller on small mobile */
+    .hero-bg-img { width: 10%; height: 10%; opacity: 0.06; }
 }
